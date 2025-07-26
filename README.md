@@ -9,7 +9,8 @@
 
 **A state-of-the-art Deep Q-Network (DQN) implementation that successfully solves LunarLander-v3**
 
-[![Demo Video](https://img.shields.io/badge/Demo-Video-red.svg)](agent_demo.mp4)
+[![Watch the video](https://img.youtube.com/vi/CPZC7xr0Fpc/0.jpg)](https://youtu.be/CPZC7xr0Fpc)
+
 [![Training Plots](https://img.shields.io/badge/Training-Plots-blue.svg)](training_analysis.png)
 
 </div>
@@ -34,7 +35,8 @@
 
 Watch our trained DQN agent successfully land the lunar lander:
 
-[![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red.svg)](agent_demo.mp4)
+[![Watch the video](https://img.youtube.com/vi/CPZC7xr0Fpc/0.jpg)](https://youtu.be/CPZC7xr0Fpc)
+
 
 *The agent demonstrates smooth, controlled landings with 91% success rate across 100 evaluation episodes.*
 
