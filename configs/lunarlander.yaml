@@ -1,0 +1,47 @@
+# Optimized DQN Configuration for LunarLander-v3
+env:
+  name: "LunarLander-v3"
+  seed: 42
+
+agent:
+  type: "DQN"
+  learning_rate: 0.0001  # Lower learning rate for stability
+  gamma: 0.99
+  epsilon_start: 1.0
+  epsilon_end: 0.02
+  epsilon_decay: 0.995
+  target_update_freq: 1000
+
+network:
+  hidden_sizes: [256, 256]  # Larger network for complex environment
+  activation: "relu"
+
+training:
+  max_episodes: 2000
+  max_steps_per_episode: 1000
+  batch_size: 64
+  buffer_size: 100000
+  min_buffer_size: 1000
+  update_freq: 4
+  eval_freq: 100
+  save_freq: 500
+
+logging:
+  log_dir: "logs"
+  tensorboard: true
+  save_rewards: true
+  verbose: true
+
+model:
+  save_dir: "checkpoints"
+  save_best: true
+  load_path: null
+
+evaluation:
+  num_episodes: 100
+  render: false
+
+advanced:
+  double_dqn: true  # Enable Double DQN for better performance
+  dueling_dqn: false
+  prioritized_replay: false 

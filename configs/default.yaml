@@ -1,0 +1,50 @@
+# DQN Training Configuration for LunarLander-v2
+
+# Environment settings
+env:
+  name: "LunarLander-v3"
+  seed: 42
+
+# Agent settings
+agent:
+  type: "DQN"
+  learning_rate: 0.001
+  gamma: 0.99  # discount factor
+  epsilon_start: 1.0
+  epsilon_end: 0.01
+  epsilon_decay: 0.995
+  target_update_freq: 1000  # update target network every N steps
+
+# Neural network settings
+network:
+  hidden_sizes: [128, 128]  # hidden layer sizes
+  activation: "relu"
+
+# Training settings
+training:
+  max_episodes: 2000
+  max_steps_per_episode: 1000
+  batch_size: 64
+  buffer_size: 100000
+  min_buffer_size: 1000  # minimum experiences before training starts
+  update_freq: 4  # update every N steps
+  eval_freq: 100  # evaluate every N episodes
+  save_freq: 500  # save model every N episodes
+
+# Logging settings
+logging:
+  log_dir: "logs"
+  tensorboard: true
+  save_rewards: true
+  verbose: true
+
+# Model settings
+model:
+  save_dir: "checkpoints"
+  save_best: true
+  load_path: null  # path to load pretrained model
+
+# Evaluation settings
+evaluation:
+  num_episodes: 100
+  render: false 
