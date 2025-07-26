@@ -141,7 +141,6 @@ checkpoints/
 # Training outputs
 agent_demo.mp4
 agent_demo.avi
-training_analysis.png
 rewards_plot.png
 
 # Temporary files
